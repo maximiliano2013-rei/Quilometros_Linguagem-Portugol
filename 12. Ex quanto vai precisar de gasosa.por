@@ -4,10 +4,9 @@ programa
 	funcao inicio()
 	{
 
-		
 		inteiro litro, percorreu
 		cadeia carro
-		real media1, media2, gasolina1, gasolina2
+		real media1, media2, gasolina1, gasolina2, arredondamento1, arredondamento2
 
 		escreva("Cálculo Quantidade de gasolina!" + "\n")
 		escreva("Quanto vai colocar de gasolina R$? ")
@@ -17,23 +16,14 @@ programa
 		escreva("Quantos KM seu carro faz com 1 litro? ")
 		leia(litro)
 
-		
 		media1 = (gasolina1/gasolina2)
-		escreva("Seu carro abastecerà: " + media1,1,1 + " litros" + "\n")
+		arredondamento1 = mat.arredondar(media1, 2) // Aqui escolha quantas casas decimais quer!
+		escreva("Seu carro abastecerá: " + arredondamento1 + " litros" + "\n")
 
 		media2 = (litro*media1)
-		escreva("Você vai conseguir andar: " + media2,1,1 + " KM" + "\n")
-
+		arredondamento2 = mat.arredondar(media2, 2)// mesma coisa! idem acima!
+		escreva("Você vai conseguir andar: " + arredondamento2 + " KM" + "\n")
+		
+		
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 176; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
